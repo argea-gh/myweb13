@@ -1759,3 +1759,136 @@ body {
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
+/* ────────────────────────────────────────── */
+/* VARIAN B — STYLING KHUSUS */
+/* ────────────────────────────────────────── */
+
+.hero-journey {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f0fdf4 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.journey-section {
+  background-color: var(--white);
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.journey-step {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f8fbf9;
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.journey-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--green-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 20px;
+}
+
+.solutions-section {
+  background-color: var(--gray-bg);
+}
+
+.persona-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.persona-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.persona-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 125, 50, 0.15);
+}
+
+.persona-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: var(--gold);
+}
+
+.persona-desc {
+  color: #6b7280;
+  margin: 16px 0 24px;
+  min-height: 60px;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.cta-journey {
+  background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+.btn-lg {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+.cta-guarantee {
+  margin-top: 20px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+  .hero-journey { padding: 60px 0 40px; }
+  .hero-headline { font-size: 2rem; }
+  .cta-content h2 { font-size: 1.8rem; }
+}
