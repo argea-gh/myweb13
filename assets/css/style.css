@@ -1892,3 +1892,40 @@ body {
   .hero-headline { font-size: 2rem; }
   .cta-content h2 { font-size: 1.8rem; }
 }
+
+/* ────────────────────────────────────────── */
+/* SEARCH CLEAR BUTTON */
+/* ────────────────────────────────────────── */
+
+.search-clear {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-box:focus-within .search-clear,
+#productSearch:not(:placeholder-shown) + .search-clear {
+  opacity: 1;
+}
+
+.search-clear:hover {
+  color: var(--red-primary);
+}
+
+/* Untuk browser yang tidak mendukung :not(:placeholder-shown) */
+#productSearch[value=""] ~ .search-clear {
+  opacity: 0 !important;
+}
