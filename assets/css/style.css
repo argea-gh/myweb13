@@ -1929,3 +1929,66 @@ body {
 #productSearch[value=""] ~ .search-clear {
   opacity: 0 !important;
 }
+
+/* ────────────────────────────────────────── */
+/* HERO JOURNEY DENGAN BACKGROUND IMAGE */
+/* ────────────────────────────────────────── */
+
+.hero-journey {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 100px 0 80px;
+  text-align: center;
+  color: white;
+}
+
+/* Overlay gelap transparan untuk teks tetap terbaca */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Gelap transparan */
+  border-radius: 0 0 40px 40px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subheadline {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  margin-bottom: 32px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+  .hero-journey {
+    padding: 70px 0 50px;
+  }
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+  .hero-subheadline {
+    font-size: 1.1rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
