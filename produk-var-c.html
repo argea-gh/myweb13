@@ -348,6 +348,35 @@
     // Render semua produk saat pertama kali
     renderProducts('all');
 
+// ✅ EVENT: Hapus pencarian via tombol X
+document.getElementById('searchClear')?.addEventListener('click', () => {
+  const searchInput = document.getElementById('productSearch');
+  searchInput.value = '';
+  searchInput.focus();
+  
+  // Trigger pencarian kosong
+  if (typeof searchProducts === 'function') {
+    searchProducts('');
+  } else {
+    // Fallback: render semua produk
+    renderProducts('all');
+  }
+});
+
+// ✅ OPSIONAL: Update tampilan tombol X saat ketik (fallback)
+document.getElementById('productSearch')?.addEventListener('input', (e) => {
+  const clearBtn = document.getElementById('searchClear');
+  if (clearBtn) {
+    clearBtn.style.opacity = e.target.value ? '1' : '0';
+  }
+  
+  // Jalankan pencarian
+  if (typeof searchProducts === 'function') {
+    searchProducts(e.target.value);
+  }
+});
+	  
+
     // ✅ FUNGSI FILTER BERDASARKAN PERSONA
     function filterByPersona(keywords) {
       let productList = JSON.parse(localStorage.getItem('herbaprimaProducts')) || products;
